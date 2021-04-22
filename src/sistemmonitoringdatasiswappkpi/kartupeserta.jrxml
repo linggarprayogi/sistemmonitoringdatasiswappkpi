@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="226" pageHeight="311" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2704c740-a0cd-40ee-9817-a8f6d4d714b7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="idpeserta" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from peserta where id_peserta LIKE '%$P!{idpeserta}%']]>
+	</queryString>
+	<field name="id_peserta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_peserta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_kelamin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tempat_lahir" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_lahir" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jurusan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="angkatan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_hp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pendidikan_terakhir" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pasfoto" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="11" width="143" height="20" uuid="82270d03-1a39-4060-8940-50958e0ece06"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KARTU PESERTA PPKPI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="32" width="143" height="20" uuid="6613e280-3a5f-4a51-8c8d-6f3a8c711fb3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PASAR REBO, JAKARTA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="53" width="186" height="1" uuid="8fada35c-1a2b-42c7-a76c-41ebaf785c85"/>
+				<graphicElement>
+					<pen lineWidth="0.75" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement x="8" y="16" width="32" height="35" uuid="7ac0d1ed-aaa2-4e52-af35-87c4feb2da7d"/>
+				<imageExpression><![CDATA["dki_login_logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="69" splitType="Stretch">
+			<rectangle>
+				<reportElement x="72" y="4" width="53" height="61" uuid="f96af27e-339c-4fb5-8991-faf4a47a4552"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="72" y="4" width="53" height="61" uuid="7e8d5c6c-e9f2-48ef-820e-1aa559b943df"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Foto 3x4]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="96" splitType="Stretch">
+			<textField>
+				<reportElement x="69" y="11" width="113" height="20" uuid="0731840f-095d-4741-8591-ed473facfb15"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" : "+$F{id_peserta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="35" width="61" height="20" uuid="4ddcc811-d724-4112-84ec-b299cd069a64"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Peserta]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="69" y="35" width="113" height="20" uuid="c243febf-58fd-4e40-b4ee-82655786065c"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" : "+$F{nama_peserta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="11" width="61" height="20" uuid="7842d209-50d0-4d29-8da6-96eccecfa9ad"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Peserta]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="69" y="61" width="113" height="20" uuid="9fa727f5-9302-441d-ac7f-131927f38fa0"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" : "+$F{jurusan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="61" width="61" height="20" uuid="397a4b0c-33ed-4037-bf6d-efe9742baeb0"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jurusan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="5" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="11" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="7" splitType="Stretch"/>
+	</summary>
+</jasperReport>
